@@ -1,0 +1,219 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling - Aesthetic Gradient Background */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #89f7fe, #66a6ff); /* Soft gradient background */
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Resume Container */
+.resume-container {
+    width: 90%;
+    max-width: 1000px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slight transparency for an elegant effect */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 0.8s ease-in-out;
+}
+
+/* Profile Section - Left Side Layout */
+.profile-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* Aesthetic Profile Picture */
+.profile-pic-wrapper {
+    position: relative;
+    margin-right: 30px;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Aesthetic Background for Profile Picture */
+.profile-pic-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f093fb, #f5576c); /* Gradient effect */
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    filter: blur(30px); /* Adds a soft glow effect */
+}
+
+.profile-pic-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent overlay */
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    filter: blur(10px); /* Inner blur */
+}
+
+/* Personal Info */
+.info {
+    flex-grow: 1;
+}
+
+.info h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #2f3640;
+    margin-bottom: 10px;
+}
+
+.info p {
+    font-size: 1.1rem;
+    color: #57606f;
+    margin-bottom: 5px;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin-right: 15px;
+    color: #57606f;
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #2f3640;
+}
+
+/* Section Headers */
+section h2 {
+    font-size: 1.8rem;
+    color: #2f3640;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #e84393;
+}
+
+/* Education & Experience Details */
+.education-details, .experience-details {
+    font-size: 1rem;
+    color: #57606f;
+    margin-bottom: 20px;
+}
+
+.education-details p, .experience-details p {
+    margin-bottom: 10px;
+}
+
+/* Skills Section */
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-list span {
+    background-color: #e84393;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(232, 67, 147, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.skill-list span:hover {
+    transform: translateY(-3px);
+}
+
+/* Button Styling */
+#toggle-skills-btn {
+    display: inline-block;
+    background-color: #2f3640;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+}
+
+#toggle-skills-btn:hover {
+    background-color: #e84393;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-pic {
+        margin: 0 0 20px 0;
+    }
+
+    .info h1 {
+        font-size: 2rem;
+    }
+
+    .info p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Keyframe Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
